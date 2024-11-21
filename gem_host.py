@@ -1,26 +1,12 @@
-import logging
-import code
-
-import secsgem.common
-import secsgem.gem
 import secsgem.hsms
+import secsgem.common
 
-from communication_log_file_handler import CommunicationLogFileHandler
-
-class SampleHost(secsgem.gem.GemHostHandler):
-    def __init__(self, settings: secsgem.common.Settings):
+class SimpleHost(secsgem.gem.GemHostHandler):
+    def __init__(self, settings):
         super().__init__(settings)
+        print("Host initialized")
 
-        self.MDLN = "gemhost"
-        self.SOFTREV = "1.0.0"
-
-commLogFileHandler = CommunicationLogFileHandler("log", "h")
-commLogFileHandler.setFormatter(logging.Formatter("%(asctime)s: %(message)s"))
-logging.getLogger("communication").addHandler(commLogFileHandler)
-logging.getLogger("communication").propagate = False
-
-logging.basicConfig(format='%(asctime)s %(name)s.%(funcName)s: %(message)s', level=logging.DEBUG)
-
+# Define settings for the HSMS connection
 settings = secsgem.hsms.HsmsSettings(
     address="127.0.0.1",
     port=5000,
@@ -28,9 +14,8 @@ settings = secsgem.hsms.HsmsSettings(
     device_type=secsgem.common.DeviceType.HOST
 )
 
-h = SampleHost(settings)
-h.enable()
+# Create and enable the host
+host = SimpleHost(settings)
+host.enable()
 
-code.interact("host object is available as variable 'h'", local=locals())
-
-h.disable()
+print("Host is running. Press Ctrl+C to stop.")
