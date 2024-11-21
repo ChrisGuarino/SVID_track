@@ -42,13 +42,13 @@ This project aims to capture and monitor data via the **SECS/GEM protocol** over
   - **HSMSPort0**: Enabled for data communication.
   - Others: Disabled, but can be enabled as needed.
 
-![HSMS Port Settings](attachment://IMG_2729.jpg)
+![HSMS Port Settings](images/IMG_2729.jpg)
 
 ### COM Port Setup
 - Individual COM port configurations are defined with baud rates, data bits, and logging options.
 - Each port corresponds to specific hardware communication channels.
 
-![COM Port Settings](attachment://IMG_2728.jpg)
+![COM Port Settings](/images/IMG_2728.jpg)
 
 ---
 
