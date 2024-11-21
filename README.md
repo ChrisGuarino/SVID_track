@@ -80,8 +80,11 @@ This project aims to capture and monitor data via the **SECS/GEM protocol** over
 ### HSMS Port Configuration
 ![HSMS Port Configuration](attachment://IMG_2729.jpg)
 
+<img src="images/IMG_2729.jpg" alt="HSMS Port Configuration" height="200">
+
 ### COM Port Configuration
 ![COM Port Configuration](attachment://IMG_2728.jpg)
+<img src="images/IMG_2728.jpg" alt="COM Port Configuration" width="300">
 
 ---
 
