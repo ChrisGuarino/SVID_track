@@ -1,5 +1,7 @@
 # SECS/GEM Data Capture Project
 
+## Documentation: https://secsgem.readthedocs.io/en/latest/
+
 ## Overview
 This project aims to capture and monitor data via the **SECS/GEM protocol** over an Ethernet connection. By leveraging the linked Python scripts and HSMS communication settings, the goal is to track specific values (such as SVIDs) over time, perform analytics like summing their values, and ensure proper communication with semiconductor equipment. The project uses an **HSMS (High-Speed SECS Message Services)** interface for communication.
 
