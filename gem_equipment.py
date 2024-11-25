@@ -1,8 +1,10 @@
 import secsgem.hsms
 import secsgem.common
+import secsgem.gem
+import code
 
 class SimpleEquipment(secsgem.gem.GemEquipmentHandler):
-    def __init__(self, settings):
+    def __init__(self, settings: secsgem.common.Settings):
         super().__init__(settings)
         print("Equipment initialized")
 
@@ -17,5 +19,7 @@ settings = secsgem.hsms.HsmsSettings(
 # Create and enable the equipment
 equipment = SimpleEquipment(settings)
 equipment.enable()
+
+code.interact("equipment object is available as variable 'h', press ctrl-d to stop", local=locals())
 
 print("Equipment is running. Press Ctrl+C to stop.")
